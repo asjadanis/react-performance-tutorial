@@ -20,8 +20,7 @@ const List = (props) => {
               onClick={(e) => {
                 removeItem(item.item);
               }}
-              key={item.id}
-            >
+              key={item.id}>
               {item.item}
             </li>
           );
