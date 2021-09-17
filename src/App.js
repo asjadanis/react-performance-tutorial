@@ -7,7 +7,7 @@ function App() {
   const [courses, setCourses] = useState([]);
 
   // Uncomment these handlers and comment the useCallback
-  // handlers to see re-rendering in effect.
+  // handlers to see unwanted re-rendering in effect.
 
   // const onAddBook = (item) => {
   //   const updatedItems = [...books, { item, id: `book-${books.length + 1}` }];
@@ -29,7 +29,7 @@ function App() {
   const onAddCourse = useCallback((item) => {
     setCourses((courses) => [
       ...courses,
-      { item, id: `item-${courses.length + 1}` }
+      { item, id: `item-${courses.length + 1}` },
     ]);
   }, []);
 
