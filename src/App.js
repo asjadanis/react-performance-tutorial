@@ -23,13 +23,13 @@ function App() {
   // };
 
   const onAddBook = useCallback((item) => {
-    setBooks((books) => [...books, { item, id: `item-${books.length + 1}` }]);
+    setBooks((books) => [...books, { item, id: `book-${books.length + 1}` }]);
   }, []);
 
   const onAddCourse = useCallback((item) => {
     setCourses((courses) => [
       ...courses,
-      { item, id: `item-${courses.length + 1}` },
+      { item, id: `course-${courses.length + 1}` },
     ]);
   }, []);
 
