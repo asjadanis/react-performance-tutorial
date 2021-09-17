@@ -1,12 +1,7 @@
-import { memo } from "react";
 import AddItem from "./AddItem";
 
 const List = (props) => {
-  const { items, onClick } = props;
-
-  const removeItem = (item) => {
-    onClick(item);
-  };
+  const { items } = props;
 
   console.log("List rendered: ", props.listKey);
 
@@ -15,19 +10,11 @@ const List = (props) => {
       <AddItem onAddItem={props.onAddItem} placeholder="Add book" />
       <ul>
         {items.map((item) => {
-          return (
-            <li
-              onClick={(e) => {
-                removeItem(item.item);
-              }}
-              key={item.id}>
-              {item.item}
-            </li>
-          );
+          return <li key={item.id}>{item.item}</li>;
         })}
       </ul>
     </>
   );
 };
 
-export default memo(List);
+export default List;
